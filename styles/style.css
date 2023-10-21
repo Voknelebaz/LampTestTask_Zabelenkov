@@ -1,4 +1,4 @@
-/*base styles*/
+/*------------------- base styles ----------------*/
 .wrapper {
     min-height: 100%;
     overflow: hidden;
@@ -10,7 +10,7 @@
     flex: 1 1 auto;
 }
 
-/*Header Styles*/
+/* ------------------Header Styles --------------------*/
 .header {
     background: #435476;
 }
@@ -60,7 +60,7 @@
 }
 
 .header__logo-text:hover {
-    text-decoration:underline 0.125rem;
+    text-decoration: underline 0.125rem;
 }
 
 /*Burger Styles */
@@ -154,7 +154,7 @@
     display: none;
 }
 
-/* Media */
+/* Media Header */
 @media (max-width:81.5rem) {
     .menu__support-list li:nth-child(2) {
         margin-right: 0rem;
@@ -213,5 +213,246 @@
 
     .header__logo {
         padding: 0 0.625rem;
+    }
+}
+
+/*------------- Main Section --------------*/
+.main {
+    background-color: #435476;
+    padding-top: 6.75rem;
+    padding-bottom: 2.8125rem;
+}
+
+.main__container {
+    max-width: 100.5rem;
+    margin: 0 auto;
+    padding: 0 0.9375rem;
+}
+
+.main__wrapper {}
+
+.main__collection {
+    display: flex;
+    padding: 0 6.25rem;
+    position: relative;
+    gap: 1.875rem;
+}
+
+.main__collection-block {}
+
+.main__collection-info {}
+
+/* Block elements */
+.block {
+    position: absolute;
+    top: 11.625rem;
+    left: 0;
+}
+
+.block__title {
+    color: #FFF;
+    text-align: center;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 3.6875rem;
+    letter-spacing: 0.1844rem;
+    margin-bottom: 2.4375rem;
+}
+
+.block__line {
+    background-color: #fff;
+    width: 3.875rem;
+    height: 0.125rem;
+    margin-bottom: 0.625rem;
+}
+
+.block__bottom {
+    display: flex;
+    align-items: center;
+
+}
+
+.block__bottom-link {
+    color: #FFF;
+    text-align: center;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 1.625rem;
+    letter-spacing: 0.0813rem;
+    text-decoration: none;
+}
+
+.block__bottom-link:hover {
+    text-decoration: underline 2px;
+}
+
+.block__bottom-arrow {}
+
+.block__image {}
+
+/* Info elements */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.info__image {}
+
+.info__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.info__title {
+    color: #FFF;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 1.8125rem;
+
+}
+
+.info__settings {
+    color: rgba(255, 255, 255, 0.60);
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 1.125rem;
+}
+.info__settings p{
+    margin-bottom: 0.3125rem;
+}
+.info__dimension {}
+
+.info__color {}
+
+.info__material {}
+
+.info__price {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.info__price-current {
+    color: #FFF;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 1.8125rem;
+
+}
+
+.info__price-recent {
+    color: rgba(255, 255, 255, 0.50);
+    font-family: 'TharlonSans', sans-serif;
+    text-decoration: line-through;
+    font-size: 1.375rem;
+
+}
+
+/* Bottom elements */
+.main__bottom {
+    margin-top: 5.3125rem;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.bottom__pages {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.bottom__pages-number {
+    color: #FFF;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 1.625rem;
+    letter-spacing: 0.0813rem;
+}
+
+.active {
+    color: #FFF;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 1.875rem;
+    letter-spacing: 0.0938rem;
+}
+
+
+
+.bottom__arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.bottom__arrow-left {}
+
+.bottom__arrow-right {}
+
+/* Media */
+@media (max-width:62.5rem) {
+    .main {
+        background-color: #435476;
+        padding-top: 2.75rem;
+        padding-bottom: 2.8125rem;
+    }
+
+    .block {
+        top: 5.625rem;
+    }
+
+    .block__title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .block__bottom-link {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:56.25rem) {
+    .main__collection {
+        flex-direction: column;
+        padding: 0 3rem;
+    }
+
+    .main__bottom {
+        margin-top: 2.5rem;
+    }
+
+}
+
+@media (max-width:25rem) {
+    .main__collection {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .block {
+        top: 2.625rem;
+    }
+
+    .block__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .block__bottom-link {
+        font-size: 1rem;
+    }
+
+    .bottom__pages-number {
+        font-size: 1.2em;
+    }
+
+    .active {
+        font-size: 1.4rem;
+    }
+
+    .bottom__arrows {
+
+        gap: 0.6rem;
     }
 }

@@ -315,9 +315,11 @@
     font-family: 'TharlonSans', sans-serif;
     font-size: 1.125rem;
 }
-.info__settings p{
+
+.info__settings p {
     margin-bottom: 0.3125rem;
 }
+
 .info__dimension {}
 
 .info__color {}
@@ -454,5 +456,115 @@
     .bottom__arrows {
 
         gap: 0.6rem;
+    }
+}
+
+/*------------------ Collection Section ----------------*/
+.collection {
+    margin-top: 2.75rem;
+
+}
+
+.collection__body {
+    text-align: center;
+}
+
+.collection__title-small {
+    margin-bottom: 0.5rem;
+    color: #1A1A1A;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 1.25rem;
+    line-height: 160%;
+    text-transform: uppercase;
+
+}
+
+.collection__title {
+    color: #1A1A1A;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 3rem;
+    line-height: 125%;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.collection__slider {}
+
+.collection__slider-slide {}
+
+.collection__slide-image {}
+
+.collection__items-container {
+    max-width: 100.5rem;
+    margin-top: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collection__items-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 0.9375rem;
+}
+
+
+.collection__item {}
+
+.collection__item-title {
+    margin-bottom: 0.625rem;
+    color: #1A1A1A;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 150%;
+    letter-spacing: 0.24rem;
+    text-transform: uppercase;
+}
+
+.collection__item-link {
+    display: inline-block;
+    color: #1A1A1A;
+    font-family: 'TharlonSans', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+    border-bottom: 0.0625rem solid #1A1A1A;
+
+}
+
+.collection__item-link:hover {
+    color: #1616c0;
+    border-bottom: 0.0625rem solid #1616c0;
+
+}
+
+/* Media */
+
+
+@media (max-width:56.25rem) {
+    .collection__slider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.25rem;
+        grid-row-gap: 1.25rem;
+    }
+}
+
+@media (max-width:42.5rem) {
+    .collection__title-small {
+        font-size: 1rem;
+    }
+
+    .collection__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .collection__items-info {
+        justify-content: center;
     }
 }

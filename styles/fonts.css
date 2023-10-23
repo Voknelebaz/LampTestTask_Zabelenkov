@@ -2,18 +2,20 @@
     font-family: 'Montserrat', sans-serif;
     src: url("assets/fonts/Montserrat-Medium.ttf");
 }
+
 @font-face {
     font-family: 'Tenor Sans', sans-serif;
     src: url("assets/fonts/TenorSans.Regular.ttf");
-    
+
 }
+
 @font-face {
     font-family: 'The Nautigal', cursive;
     src: url("assets/fonts/TheNautigal-Regular.ttf");
-    
 }
+
 @font-face {
     font-family: 'TharlonSans', sans-serif;
     src: url("assets/fonts/TharlonSans-Regular.ttf");
-    
+
 }

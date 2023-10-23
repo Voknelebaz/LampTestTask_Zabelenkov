@@ -7,6 +7,7 @@
     <title>Lamp Shop</title>
     <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon-lamp.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -21,7 +22,7 @@
                 <div class="header__vl-2"></div>
                 <div class="header__wrapper">
                     <nav class="menu">
-                        <div class="burger__menu">
+                        <div onclick="openNav()" class="burger__menu">
                             <div class="burger__line"></div>
                             <div class="burger__line"></div>
                             <div class="burger__line"></div>
@@ -61,8 +62,57 @@
                 </div>
             </div>
         </header>
+
         <main class="page">
             <section class="main">
+                <div id="burgerSide" class="burger__side">
+                    <div class="burger__header">
+                        <h4 class="burger__title">Menu</h4>
+                        <a href="#" class="burger__close" onclick="closeNav()">×</a>
+                    </div>
+                    <div class="burger__body">
+                        <ul class="burger__list-item">
+                            <li class="burger__item"><a href="#" class="burger__item-link">new
+                                    collection</a><span class="active-link"></span></li>
+                            <li class="burger__item"><a href="#" class="burger__item-link">new arrival</a><span class="not-active"></span>
+                            </li>
+                            <li class="burger__item"><a href="#" class="burger__item-link">best choice</a><span class="not-active"></span>
+                            </li>
+                            <li class="burger__item"><a href="#" class="burger__item-link">big sale
+                                    -80%</a><span class="not-active"></span></li>
+                            <li class="burger__item"><a href="#" class="burger__item-link">best offer</a><span class="not-active"></span>
+                            </li>
+                            <li class="burger__item"><a href="#" class="burger__item-link">season
+                                    discounts</a><span class="not-active"></span></li>
+                        </ul>
+                        <div class="burger__contacts">
+                            <p class="burger__contacts-text">Follow us:</p>
+                            <div class="burger__contacts-icons">
+                                <img class="burger__icon-facebook" src="assets/images/icons/icon-facebook-dark.svg"
+                                    alt="Icon Facebook">
+                                <img class="burger__icon-twitter" src="assets/images/icons/icon-twitter-dark.svg"
+                                    alt="Icon Twitter">
+                                <img class="burger__icon-instagram" src="assets/images/icons/icon-instagram-dark.svg"
+                                    alt="Icon Instagram">
+                            </div>
+                        </div>
+                        <div class="burger__sale">
+                            <p class="burger__sale-textTime">Time</p>
+                            <p class="burger__sale-textSale">Sale</p>
+                            <div class="burger__sale-off sale__off">
+                                <div class="sale__off-col1">
+                                    <p class="sale__off-text">max </p>
+                                    <p class="sale__off-textNum">80  </p>
+                                </div>
+                                <div class="sale__off-col2">
+                                    <p class="sale__off-text">% </p>
+                                    <p class="sale__off-text">Off </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="main__container">
                     <div class="main__wrapper">
                         <div class="main__collection">
@@ -379,8 +429,8 @@
                                     src="assets/images/icons/icon-fax.svg" alt="Icon Fax"><a href="#"
                                     class="menu-col__item-link">23423142314234</a></li>
                             <li class="menu-col__item menu-col__text"><img class="menu-col__item-icon"
-                                    src="assets/images/icons/icon-email.svg" alt="Icon Email"><a href="#"
-                                    class="menu-col__item-link">admin@admin.com</a></li>
+                                    src="assets/images/icons/icon-email.svg" alt="Icon Email"><a
+                                    href="mailto:admin@admin.com" class="menu-col__item-link">admin@admin.com</a></li>
                             <li class="menu-col__item menu-col__text"><img class="menu-col__item-icon"
                                     src="assets/images/icons/icon-location.svg" alt="Icon Location"><a href="#"
                                     class="menu-col__item-link">Store Northeast 4th Ave Fort Lauderdale 33304 Paris
@@ -465,6 +515,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="slider.js"></script>
+    <script src="burger.js"></script>
 </body>
 
 </html>

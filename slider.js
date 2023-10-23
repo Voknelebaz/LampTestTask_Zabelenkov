@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-    'use strict';
+    
     let breakpoint = window.matchMedia('(max-width:56.25rem)');
     let swiperWrapper = document.getElementById("swiperWrapper");
     let swiper;

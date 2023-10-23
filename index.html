@@ -7,22 +7,21 @@
     <title>Lamp Shop</title>
     <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon-lamp.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
-
+    <script src="swap.js"></script>
 </head>
 
-<body>
+<body id="body">
     <div class="wrapper">
-        <header class="header">
+        <header id="header" class="header">
             <div class="header__container">
                 <div class="header__vl-1"></div>
                 <div class="header__vl-2"></div>
                 <div class="header__wrapper">
                     <nav class="menu">
-                        <div onclick="openNav()" class="burger__menu">
+                        <div id="burger" onclick="openNav()" class="burger__menu">
                             <div class="burger__line"></div>
                             <div class="burger__line"></div>
                             <div class="burger__line"></div>
@@ -37,7 +36,8 @@
                     </nav>
 
                     <div class="header__logo">
-                        <a href="#" class="header__logo-text">luminaire</a>
+                        <a id="first-title" href="#" class="header__logo-text">luminaire</a>
+                        <a id="second-title" href="#" class="header__logo-text disable">capsule</a>
                     </div>
                     <nav class="menu__support">
                         <ul class="menu__support-list">
@@ -62,25 +62,27 @@
                 </div>
             </div>
         </header>
-
         <main class="page">
-            <section class="main">
+            <section id="main" class="main">
                 <div id="burgerSide" class="burger__side">
                     <div class="burger__header">
                         <h4 class="burger__title">Menu</h4>
-                        <a href="#" class="burger__close" onclick="closeNav()">×</a>
+                        <a id="close" href="#" class="burger__close" onclick="closeNav()">×</a>
                     </div>
                     <div class="burger__body">
                         <ul class="burger__list-item">
                             <li class="burger__item"><a href="#" class="burger__item-link">new
                                     collection</a><span class="active-link"></span></li>
-                            <li class="burger__item"><a href="#" class="burger__item-link">new arrival</a><span class="not-active"></span>
+                            <li class="burger__item"><a href="#" class="burger__item-link">new arrival</a><span
+                                    class="not-active"></span>
                             </li>
-                            <li class="burger__item"><a href="#" class="burger__item-link">best choice</a><span class="not-active"></span>
+                            <li class="burger__item"><a href="#" class="burger__item-link">best choice</a><span
+                                    class="not-active"></span>
                             </li>
                             <li class="burger__item"><a href="#" class="burger__item-link">big sale
                                     -80%</a><span class="not-active"></span></li>
-                            <li class="burger__item"><a href="#" class="burger__item-link">best offer</a><span class="not-active"></span>
+                            <li class="burger__item"><a href="#" class="burger__item-link">best offer</a><span
+                                    class="not-active"></span>
                             </li>
                             <li class="burger__item"><a href="#" class="burger__item-link">season
                                     discounts</a><span class="not-active"></span></li>
@@ -102,7 +104,7 @@
                             <div class="burger__sale-off sale__off">
                                 <div class="sale__off-col1">
                                     <p class="sale__off-text">max </p>
-                                    <p class="sale__off-textNum">80  </p>
+                                    <p class="sale__off-textNum">80 </p>
                                 </div>
                                 <div class="sale__off-col2">
                                     <p class="sale__off-text">% </p>
@@ -117,20 +119,28 @@
                     <div class="main__wrapper">
                         <div class="main__collection">
                             <div class="main__collection-block">
-                                <img class="block__image" src="assets/images/main-section/img-8.webp" alt="Block Image">
+                                <img id="block-image-1" class="block__image" src="assets/images/main-section/img-8.webp"
+                                    alt="Block Image">
+                                <img id="block-image-2" class="block__image disable"
+                                    src="assets/images/main-section/img-16.webp" alt="Block Image">
                                 <div class="block">
-                                    <h2 class="block__title">New Collection</h2>
+                                    <h2 id="block__title-fir" class="block__title">New Collection</h2>
+                                    <h2 id="block__title-sec" class="block__title disable">Led Lighting</h2>
                                     <div class="block__line"></div>
                                     <div class="block__bottom">
                                         <a class="block__bottom-link" href="#">See Collection</a>
                                         <img class="block__bottom-arrow"
                                             src="assets/images/icons/icon-rightCornerArrow.svg" alt="Arrow">
+
                                     </div>
                                 </div>
                             </div>
 
                             <div class="main__collection-info info">
-                                <img class="info__image" src="assets/images/main-section/img-9.webp" alt="Info Image">
+                                <img id="block-image-3" class="info__image" src="assets/images/main-section/img-9.webp"
+                                    alt="Info Image">
+                                <img id="block-image-4" class="block__image disable"
+                                    src="assets/images/main-section/img-17.webp" alt="Block Image">
                                 <div class="info__text">
                                     <h2 class="info__title">Coral Reef Floor Lamp</h2>
                                     <div class="info__settings">
@@ -153,16 +163,18 @@
                         </div>
                         <div class="main__bottom bottom">
                             <div class="bottom__pages">
-                                <p class="active bottom__pages-number ">1</p>
-                                <p class="bottom__pages-number">2</p>
+                                <p class="active bottom__pages-number" onclick="swap1()">1</p>
+                                <p class="bottom__pages-number" onclick="swap2()">2</p>
                                 <p class="bottom__pages-number">3</p>
                             </div>
                             <div class="bottom__arrows">
                                 <div class="bottom__arrow-left">
-                                    <img src="assets/images/icons/icon-arrowLeft.svg" alt="Arrow Left">
+                                    <img src="assets/images/icons/icon-arrowLeft.svg" alt="Arrow Left"
+                                        onclick="swap1()">
                                 </div>
                                 <div class="bottom__arrow-right">
-                                    <img src="assets/images/icons/icon-arrowRight.svg" alt="Arrow Right">
+                                    <img src="assets/images/icons/icon-arrowRight.svg" alt="Arrow Right"
+                                        onclick="swap2()">
                                 </div>
                             </div>
                         </div>
@@ -400,7 +412,7 @@
                     </div>
                 </div>
             </section>
-            <section class="subscribe">
+            <section id="subscribe" class="subscribe">
                 <div class="subscribe__container">
                     <div class="subscribe__wrapper">
                         <div class="subscribe__text">
@@ -415,13 +427,15 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="footer__container">
                 <div class="footer__wrapper">
                     <nav class="footer__menu">
                         <ul class="footer__menu-col">
-                            <li class="menu-col__item menu-col__mainTitle"><a href="#"
+                            <li class="menu-col__item menu-col__mainTitle"><a id="footer-title-1" href="#"
                                     class="menu-col__item-link">luminaire</a></li>
+                            <li class="menu-col__item menu-col__mainTitle "><a id="footer-title-2" href="#"
+                                    class="menu-col__item-link disable">capsule</a></li>
                             <li class="menu-col__item menu-col__text"><img class="menu-col__item-icon"
                                     src="assets/images/icons/icon-phone.svg" alt="Icon Phone"><a
                                     href="tel:+33324324234342" class="menu-col__item-link">33324324234342</a></li>
@@ -516,6 +530,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="slider.js"></script>
     <script src="burger.js"></script>
+
 </body>
 
 </html>
